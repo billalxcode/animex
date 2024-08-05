@@ -1,43 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animex | Nonton Anime Dimana Saja</title>
-    
+    <title>Cretoo | Nonton Anime Dimana Saja</title>
     <link rel="stylesheet" href="assets/css/app.css">
 </head>
+
 <body>
     <nav>
         <h3>Cretoo</h3>
-
         <ul class="nav-list">
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/list">List</a>
-            </li>
-            <li>
-                <a href="/genres">Genres</a>
-            </li>
-            <li>
-                <a href="/ongoing">Ongoing</a>
-            </li>
-            <li>
-                <a href="/popular">Popular</a>
-            </li>
-            <li>
-                <a href="/jadwal">Jadwal</a>
-            </li>
-            <li>
-                <a href="/bookmark"></a>
-            </li>
+            <li><a href="/">Genre</a></li>
+            <li><a href="/popular">Popular</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/shows">Shows</a></li>
+            <li><a href="/character">Character</a></li>
         </ul>
-
-        <form action="/search.html" method="get" class="search-form">
-            <input type="text" name="q" id="q" class="search-input" placeholder="Kimetsu No Yaiba">
-        </form>
+        <div class="nav-right">
+            <form action="/search.html" method="get" class="search-form">
+                <input type="text" name="q" id="q" class="search-input" placeholder="Search...">
+            </form>
+            <button class="join-btn">Join Now</button>
+        </div>
     </nav>
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p>SEASON 1 | 2019</p>
+            <h1>Demon Slayer: Kimetsu no Yaiba</h1>
+            <div class="rating">
+                <span>⭐️⭐️⭐️⭐️</span>
+                <span>⭐️</span>
+            </div>
+            <div class="tags">
+                <span>Drama</span>
+                <span>Thriller</span>
+                <span>Action</span>
+            </div>
+            <p class="description">A youth begins a quest to fight demons and save his sister after finding his family
+                slaughtered and his sister turned into a demon.</p>
+            <button class="watch-btn">Watch Now</button>
+            <button class="save-btn">Save for later</button>
+        </div>
+    </div>
+    <div class="recent-anime">
+        <h2>Most Recent Anime</h2>
+        <div class="anime-list">
+            <div class="anime-item">
+                <img src="https://via.placeholder.com/150x200" alt="Yofukashi no Uta">
+                <p>Yofukashi no Uta</p>
+            </div>
+            <div class="anime-item">
+                <img src="https://via.placeholder.com/150x200" alt="Bleach: Thousand-Year Blood War">
+                <p>Bleach: Thousand-Year Blood War</p>
+            </div>
+            <div class="anime-item">
+                <img src="https://via.placeholder.com/150x200" alt="Attack on Titan">
+                <p>Attack on Titan</p>
+            </div>
+            <div class="anime-item">
+                <img src="https://via.placeholder.com/150x200" alt="The Seven Deadly Sins">
+                <p>The Seven Deadly Sins</p>
+            </div>
+            <div class="anime-item">
+                <img src="https://via.placeholder.com/150x200" alt="Death Note">
+                <p>Death Note</p>
+            </div>
+        </div>
+
+    </div>
 </body>
+
 </html>
