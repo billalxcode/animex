@@ -30,15 +30,25 @@ nav {
     padding-left: 3rem;
     padding-right: 3rem;
 
+    gap: 30px;
 }
 
 nav>h3 {
     color: white;
     font-family: "DM Sans", sans-serif;
     font-weight: bold;
+    font-size: 35px;
 }
 
 .nav-list {
     display: flex;
+    align-items: center;
     gap: 30px;
+    list-style-type: none;
+}
+
+.nav-list>li>a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
 }
