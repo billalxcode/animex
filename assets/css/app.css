@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-background: #1b1b1b;
+    --color-primary: #7a22c9;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: "DM Sans", sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+
+    background-color: var(--color-background);
+    width: 100%;
+    padding: 10px;
+    box-shadow: 1px 10px 16px -5px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 1px 10px 16px -5px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 10px 16px -5px rgba(0, 0, 0, 0.4);
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+}
+
+nav>h3 {
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+}
