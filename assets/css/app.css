@@ -19,6 +19,8 @@ body {
 nav {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
     background-color: var(--color-background);
     width: 100%;
@@ -51,4 +53,8 @@ nav>h3 {
     text-decoration: none;
     color: white;
     font-weight: 500;
+}
+
+.search-input {
+    padding: 6px;
 }
