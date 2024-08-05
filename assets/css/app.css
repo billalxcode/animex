@@ -144,6 +144,9 @@ nav h3 {
 }
 
 .recent-anime {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     padding: 50px;
 }
 
@@ -158,6 +161,7 @@ nav h3 {
 
 .anime-item {
     text-align: center;
+    width: 150px;
 }
 
 .anime-item img {
@@ -165,7 +169,6 @@ nav h3 {
     height: 200px;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 10px;
 }
 
 .anime-item p {
