@@ -6,8 +6,21 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-background: #000;
+    --color-primary: #db0000;
+    --color-primary60: #db0000d8;
+    --border-color: #333;
+
+    --font-size-heading: 40px;
+    --font-size-title: 24px;
+    --font-size-description: 16px;
+    --font-family: 'DM Sans',
+        sans-serif
+}
+
 body {
-    background-color: #000;
+    background-color: var(--color-background);
     color: #fff;
     font-family: 'DM Sans', sans-serif;
 }
@@ -16,13 +29,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000;
+    background-color: var(--color-background);
     padding: 20px 50px;
 }
 
 nav h3 {
     color: #fff;
-    font-size: 24px;
+    font-size: var(--font-size-heading);
 }
 
 .nav-list {
@@ -48,9 +61,9 @@ nav h3 {
 
 .search-input {
     padding: 10px;
-    border: 1px solid #333;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
-    background-color: #000;
+    background-color: var(--color-background);
     color: #fff;
     margin-right: 10px;
 }
@@ -62,7 +75,7 @@ nav h3 {
 
 .join-btn {
     padding: 10px 20px;
-    background-color: #db0000;
+    background-color: var(--color-primary);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -103,74 +116,219 @@ nav h3 {
 }
 
 .hero-content h1 {
-    font-size: 48px;
+    font-size: var(--font-size-heading);
     font-weight: 700;
 }
 
 .rating span {
-    font-size: 20px;
+    font-size: var(--font-size-description);
     margin-right: 5px;
 }
 
 .tags span {
-    background: #db0000;
+    background: var(--color-primary);
     padding: 5px 10px;
     border-radius: 3px;
+    font-size: var(--font-size-description);
     margin-right: 10px;
 }
 
 .description {
-    font-size: 16px;
+    font-size: var(--font-size-description);
     line-height: 1.5;
 }
 
 .watch-btn,
 .save-btn {
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
+    font-size: var(--font-size-description);
     cursor: pointer;
     margin-right: 10px;
 }
 
 .watch-btn {
-    background-color: #db0000;
+    background-color: var(--color-primary);
     color: #fff;
 }
 
 .save-btn {
-    background-color: #333;
+    background-color: var(--border-color);
     color: #fff;
 }
 
 .recent-anime {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    gap: 50px;
     width: 100%;
     padding: 50px;
 }
 
-.recent-anime h2 {
+.recent-anime-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recent-anime-header a {
+    color: var(--color-primary);
+    font-size: var(--font-size-title);
+    text-decoration: none;
+}
+
+.recent-anime-header h2 {
+    font-size: var(--font-size-title);
     margin-bottom: 20px;
+}
+
+.recent-anime-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .anime-list {
     display: flex;
+    width: 100%;
     gap: 20px;
+
+    overflow-x: scroll;
+    overflow-wrap: normal;
+    scrollbar-width: none;
 }
 
 .anime-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     text-align: center;
-    width: 150px;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
 }
 
 .anime-item img {
-    width: 150px;
-    height: 200px;
+    height: 350px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 .anime-item p {
-    font-size: 14px;
+    font-size: var(--font-size-description);
+}
+
+.anime-item:hover {
+    transform: translateY(-5px);
+}
+
+.anime-news-container {
+    padding: 50px;
+    width: 100%;
+}
+
+.anime-news-list {
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.anime-news-card {
+    width: 300px;
+    background-color: #1a1a1a;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.anime-news-card img {
+    width: 100%;
+    height: 200px;
+}
+
+.anime-news-content {
+    padding: 15px;
+}
+
+.anime-news-title {
+    font-size: var(--font-size-title);
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.anime-news-meta {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.anime-news-description {
+    font-size: var(--font-size-description);
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #1a1a1a;
+    
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-container {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    /* gap: 20px; */
+}
+
+.footer-container .footer-item {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-container .footer-item h3 {
+    opacity: .9;
+}
+
+.footer-container .footer-item p {
+    opacity: .5;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.footer-container .footer-item:last-child h3 {
+    text-align: end;
+}
+
+.footer-container .footer-item:last-child .social-media-list {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+
+.footer-container .footer-item:last-child .social-media-list .social-media-item {
+    padding: 10px;
+    background-color: var(--border-color);
+    border-radius: 100px;
+}
+
+.footer-container .footer-item:last-child .social-media-list .social-media-item:hover {
+    cursor: pointer;
+}
+
+.footer-copyright {
+    margin-top: 50px;
+}
+
+.footer-copyright p {
+    font-size: 12px;
+    opacity: .5;
 }
