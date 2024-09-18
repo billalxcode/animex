@@ -84,7 +84,7 @@ nav h3 {
 
 .hero {
     position: relative;
-    background: url('/assets/image/hero.png') no-repeat center center/cover;
+    background: url('../image/hero.png') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -240,6 +240,12 @@ nav h3 {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.anime-news-card:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
 }
 
 .anime-news-card img {
